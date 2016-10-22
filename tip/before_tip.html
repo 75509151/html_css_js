@@ -1,0 +1,37 @@
+<style>
+    .tooltip a {position: relative;}
+    .tooltip a::before {
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-top: 10px solid #abcdef;
+        position: absolute;
+        left: 0%;
+        bottom: 90%;
+        content: "";
+        height: 0;
+        width: 0;
+        opacity: 0;
+        margin:0 0 20px 15px;
+        transition: all 0.4s ease;
+    }
+    .tooltip a::after {
+        border-radius: 5px;
+        background: #abcdef;
+        color: #000;
+        position: absolute;
+        left: 0%;
+        bottom: 130%;
+        content: attr(data-tooltip);
+        white-space: nowrap;
+        padding: 5px 15px;
+        margin-bottom: 15px;
+        opacity: 0;
+        transition: all 0.4s ease;
+    }
+    .tooltip a:hover::before {bottom: 65%;}
+    .tooltip a:hover::after {bottom: 90%;}
+    .tooltip a:hover::after, .tooltip a:hover::before {opacity: 1;}
+</style>
+<p>fsdddddddddddddddddddddddddd</p>
+<p class="tooltip">
+sfdsfdfsfssssssssssssssssssssssss<a data-tooltip="tip" href="#">dfsfffffffffffffffffffffffff</a>sfsdfsssssssssssssssssdfsdfkjojfojworjwioejrio</p>

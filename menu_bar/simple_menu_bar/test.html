@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>css实现下拉菜单</title>
+    <style type="text/css">
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    #nav {
+        background-color: #eee;
+        width: 500px;
+        height: 40px;
+        margin: 0 auto;
+    }
+    
+    ul {
+        list-style: none;
+    }
+    
+    ul li {
+        float: left;
+        line-height: 40px;
+        text-align: center;
+    }
+    
+    a {
+        text-decoration: none;
+        color: #000;
+        padding: 0 10px;
+        display: block;
+    }
+    
+    a:hover {
+        color: #fff;
+        background-color: #666;
+    }
+    
+    ul li ul li {
+        float: none;
+        background-color: #eee;
+        margin-top: 2px;
+    }
+    
+    ul li ul {
+        position: absolute;
+        display: none;
+    }
+    
+    ul li ul li a:hover {
+        background-color: #06f;
+    }
+    
+    ul li:hover ul {
+        display: block;
+    }
+    </style>
+</head>
+
+<body>
+    <div id="nav">
+        <ul>
+            <li><a href="#">按钮1</a></li>
+            <li> <a href="#">按钮2</a>
+                <ul>
+                    <li><a href="#">下拉菜单项</a></li>
+                    <li><a href="#">下拉菜单项</a></li>
+                </ul>
+            </li>
+            <li> <a href="#">按钮3</a>
+                <ul>
+                    <li><a href="#">下拉菜单项</a></li>
+                    <li><a href="#">下拉菜单项</a></li>
+                    <li><a href="#">下拉菜单项</a></li>
+                </ul>
+            </li>
+            <li><a href="#">按钮4</a></li>
+            <li><a href="#">按钮5</a></li>
+        </ul>
+    </div>
+</body>
+
+</html>
+<!-- 看到问题，我翻出了以前练习的demo
+原理就是通过:hover伪类来控制子选项的显示，默认是隐藏的
+技能点都是最基本的单个属性了，比如display,position,float
+先看HTML结构，最外层的ul>li是一级菜单，一共有五个按钮。其中，第二个和第三个按钮下面各有一个无序列表，这个无序列表里面放的就是下拉菜单。
+
+ul li ul {
+    display: none; 
+}
+
+这个声明表示隐藏下拉菜单。
+
+ul li:hover ul{
+    display: block; 
+}
+
+这个声明表示鼠标移到一级菜单的按钮上面时，显示它的后代ul元素。
+
+鼠标没有放在按钮上面，应用第一个样式，这时下拉菜单隐藏的，当你鼠标放在按钮上面，应用第二个样式，这时下拉菜单是显示的。
+
+作者：张阳
+链接：https://www.zhihu.com/question/36356940/answer/67920840
+来源：知乎
+著作权归作者所有，转载请联系作者获得授权。 -->
