@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,CAAC;EACG,OAAO,EAAE,CAAC;EACV,MAAM,EAAE,CAAC;;AAEb,MAAM;EACF,KAAK,EAAE,IAAI;EACX,gBAAgB,EAAE,MAAM;EACxB,SAAS,EAAE,IAAI",
+"sources": ["holy.scss"],
+"names": [],
+"file": "holy"
+}

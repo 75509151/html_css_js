@@ -1,0 +1,144 @@
+html, body{
+    margin: 0;
+    padding: 0;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family:  Arial, Helvetica, Verdana, Sans-serif;
+    font-size: 20px;
+    color: #666666;
+}
+
+
+h1{
+    margin: 0;
+    padding: 0;
+}
+
+#page-container{
+    width: 760px;
+    /*on the center of its container*/
+    margin: auto; 
+    background: #fff;    
+    
+}
+#main-nav{
+    height: 50px;
+    background: red;
+    padding-left:  11px;
+}
+
+#main-nav dl{
+    margin: 0;
+    padding: 0;
+}
+
+#main-nav dt {
+    float: left;
+}
+
+#main-nav dt a {
+    display: block;
+    height: 0px !important;
+    height /**/:50px; /* IE 5/Win hack */ 
+    padding: 50px 0 0 0;
+    overflow: hidden;
+    background-repeat: no-repeat;
+}
+
+#main-nav dt a:hover {
+    background-position: 0 -100px;
+}
+#main-nav dt#about,
+#main-nav dt#about a { width: 71px; background-image: url(../img/about.gif); }
+
+#main-nav dt#services,
+#main-nav dt#services a { width: 84px; background-image: url(../img/services.gif); }
+
+#main-nav dt#portfolio,
+#main-nav dt#portfolio a { width: 95px; background-image: url(../img/portfolio.gif); }
+
+#main-nav dt#contact,
+#main-nav dt#contact a { width: 106px; background-image: url(../img/contact.gif); }
+
+#header{
+    
+    height: 150px;
+    background: #db6d16 
+                                url(../img/about.jpg);
+}
+#header h1{
+    float: right;
+    margin-right: 20px;
+    margin-top: 57px;
+}
+
+#footer {
+    clear: both;
+    height: 66px;
+    font-size: 20px;
+    color: #c9c9c9;
+}
+#footer a {
+    color: #c9c9c9;
+    text-decoration: none;
+}
+#footer a:hover {
+    color: #db6d16;
+}
+
+#footer #altnav{
+    width: 350px;
+    float: right;
+    text-align: right;
+}
+
+#sidebar-a {
+    float: right;
+    width: 280px;
+    background: #AAAAFF;
+}
+#sidebar-a .padding{
+    padding: 25px;
+}
+
+
+#content {
+    margin-right: 20px;
+    background: yellow;
+
+}
+#content h2 {
+    margin: 0;
+    padding: 0;
+    padding-bottom: 15px;
+}
+#content p {
+    margin: 0;
+    padding: 0;
+    padding-bottom: 15px;
+}
+#content .padding{
+    padding: 25px;
+}
+
+
+
+body.about dt#about,
+body.about dt#about a,
+body.services dt#services,
+body.services dt#services a,
+body.portfolio dt#portfolio,
+body.portfolio dt#portfolio a,
+body.contact dt#contact,
+body.contact dt#contact a {
+    background-position: 0 -100px;
+}
+
+.hidden {
+    display: none;
+}

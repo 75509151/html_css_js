@@ -1,0 +1,144 @@
+
+<link rel="stylesheet" type="text/css" href="css/keyboard.css">
+<link rel="stylesheet" type="text/css" href="css/index.css">
+
+
+<div class="form" id="R1sAdminRoboCmdForm" has_msgbox="MsgBox" has_numkeyboard="CNumPad">
+<div class="form_inner">
+    <div class="widget robo_cmd_sidebar" id="robo_cmd_sidebar">
+           
+            <ul>
+                <li class="jump_board"><a href="javascript:show_board('xy_board')">xy_board</a></li>
+                <li class="jump_board"><a href="javascript:show_board('control_board')">control_board</a></li>
+                <li class="jump_board"><a href="javascript:show_board('cg_board')">cg_board</a></li>
+                <li class="jump_board"><a href="javascript:show_board('ex_board')">ex_board</a></li>
+                <li class="jump_board"><a href="javascript:show_board('ex_os_board')">ex_os_board</a></li>
+                <li class="jump_board"><a href="javascript:show_board('ds_board')">ds_board</a></li>
+                <li class="jump_board"><a href="javascript:show_board('ds_os_board')">ds_os_board</a></li>
+                <li class="jump_board"><a href="javascript:show_board('common_board')">common_board</a></li>
+            </ul>
+        </div>
+    <div class="content">
+        <div class="widget robo_cmd_log" id="robo_cmd_log" wtype="RoboCmdLogWidget">
+            <textarea class="log"></textarea> 
+            <input type="button" class='btn' value="clear" id="btn_log_clear" onclick="clear_log(this)" />
+        </div>
+        <div class="board_warp" id="board_warp">
+            <div class="widget board selec" id="xy_board" wtype='RoboCmdWidget'>
+                <input type="text" class="cmd" onclick="show_keyboard()"/>
+                <input type="button" class='btn' value="xy_cmd_add" onclick="robo_cmd_add(this, '_ x_y');"/>
+                <ul class="cmd_list">
+                </ul>
+            </div> 
+
+            <div class="widget board hide" wtype="RoboCmdWidget" id="control_board">
+                <input type="text" class="cmd" onclick="show_keyboard()"/>
+                <input type="button" class='btn' value="control_cmd_add" onclick="robo_cmd_add(this, 'control')" />
+                <ul class="cmd_list"></ul>
+            </div>
+
+            <div class="widget board hide" wtype="RoboCmdWidget" id="cg_board">
+                <input type="text" class="cmd" onclick="show_keyboard()" />
+                <input type="button" class='btn' value="cg_cmd_add" onclick="robo_cmd_add(this, '_ carriage');"/>
+                <ul class="cmd_list">
+                </ul>
+            </div> 
+
+            <div class="widget board hide" wtype="RoboCmdWidget" id="ex_board">
+                <input type="text" class="cmd" onclick="show_keyboard()"/>
+                <input type="button" class='btn' value="ex_cmd_add" onclick="robo_cmd_add(this, '_ exchange');"/>
+                <ul class="cmd_list">
+                </ul>
+            </div>
+
+            <div class="widget board hide" wtype="RoboCmdWidget" id="ex_os_board">
+                <input type="text" class="cmd" onclick="show_keyboard()"/>
+                <input type="button" class='btn' value="ex_os_cmd_add" onclick="robo_cmd_add(this, '_ exchange_os');"/>
+                <ul class="cmd_list"></ul>
+            </div> 
+
+            <div class="widget board hide" wtype="RoboCmdWidget" id="ds_board">
+                <input type="text" class="cmd" onclick="show_keyboard()"/>
+                <input type="button" class='btn' value="ds_cmd_add" onclick="robo_cmd_add(this, '_ dispense');"/>
+                <ul class="cmd_list">
+                </ul>
+            </div>  
+
+            <div class="widget board hide" wtype="RoboCmdWidget" id="ds_os_board">
+                <input type="text" class="cmd" onclick="show_keyboard()"/>
+                <input type="button" class='btn' value="ds_os_cmd_add" onclick="robo_cmd_add(this, '_ dispense_os');"/>
+                <ul class="cmd_list"></ul>
+            </div> 
+            <div class="widget board hide" wtype="RoboCmdWidget" id="common_board">
+                <input type="text" class="cmd" onclick="show_keyboard()"/>
+                <input type="button" class='btn' value="common_cmd_add" onclick="robo_cmd_add(this, '');"/>
+                <ul class="cmd_list">
+                </ul>
+            </div> 
+        </div>
+        <div class="keyboard_wrap">
+            <ul id="keyboard">
+                <li class="symbol"><span class="off">`</span><span class="on">~</span></li>
+                <li class="symbol"><span class="off">1</span><span class="on">1</span></li>
+                <li class="symbol"><span class="off">2</span><span class="on">2</span></li>
+                <li class="symbol"><span class="off">3</span><span class="on">3</span></li>
+                <li class="symbol"><span class="off">4</span><span class="on">4</span></li>
+                <li class="symbol"><span class="off">5</span><span class="on">5</span></li>
+                <li class="symbol"><span class="off">6</span><span class="on">6</span></li>
+                <li class="symbol"><span class="off">7</span><span class="on">7</span></li>
+                <li class="symbol"><span class="off">8</span><span class="on">8</span></li>
+                <li class="symbol"><span class="off">9</span><span class="on">9</span></li>
+                <li class="symbol"><span class="off">0</span><span class="on">0</span></li>
+                <li class="symbol"><span class="off">_</span><span class="on">_</span></li>
+                <li class="symbol"><span class="off">=</span><span class="on">+</span></li>
+                <li class="delete lastitem">delete</li>
+                <li class="tab">tab</li>
+                <li class="letter">q</li>
+                <li class="letter">w</li>
+                <li class="letter">e</li>
+                <li class="letter">r</li>
+                <li class="letter">t</li>
+                <li class="letter">y</li>
+                <li class="letter">u</li>
+                <li class="letter">i</li>
+                <li class="letter">o</li>
+                <li class="letter">p</li>
+                <li class="symbol"><span class="off">[</span><span class="on">{</span></li>
+                <li class="symbol"><span class="off">]</span><span class="on">}</span></li>
+                <li class="symbol lastitem"><span class="off">\</span><span class="on">|</span></li>
+                <li class="capslock">caps lock</li>
+                <li class="letter">a</li>
+                <li class="letter">s</li>
+                <li class="letter">d</li>
+                <li class="letter">f</li>
+                <li class="letter">g</li>
+                <li class="letter">h</li>
+                <li class="letter">j</li>
+                <li class="letter">k</li>
+                <li class="letter">l</li>
+                <li class="symbol"><span class="off">;</span><span class="on">:</span></li>
+                <li class="symbol"><span class="off">'</span><span class="on">&quot;</span></li>
+                <li class="return lastitem">return</li>
+                <li class="left-shift">shift</li>
+                <li class="letter">z</li>
+                <li class="letter">x</li>
+                <li class="letter">c</li>
+                <li class="letter">v</li>
+                <li class="letter">b</li>
+                <li class="letter">n</li>
+                <li class="letter">m</li>
+                <li class="symbol"><span class="off">,</span><span class="on">&lt;</span></li>
+                <li class="symbol"><span class="off">.</span><span class="on">&gt;</span></li>
+                <li class="symbol"><span class="off">/</span><span class="on">?</span></li>
+                <li class="right-shift lastitem">shift</li>
+                <li class="space lastitem">&nbsp;</li>
+            </ul>
+        </div>
+        
+        <input type="button" class="widget btn btn_finish" id="btn_finish" wtype="ButtonWidget" />
+    </div>
+    
+</div>
+</div>
+
+<script type="text/javascript" src="js/robo_cmd.js"></script>
